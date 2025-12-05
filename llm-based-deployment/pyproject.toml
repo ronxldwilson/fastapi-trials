@@ -4,4 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ctransformers>=0.2.27",
+    "fastapi>=0.123.9",
+    "pydantic>=2.12.5",
+    "uvicorn>=0.38.0",
+]
