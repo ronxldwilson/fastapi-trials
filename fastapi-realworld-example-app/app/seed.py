@@ -22,6 +22,9 @@ from app.models.user import User
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Fix for Windows asyncio event loop issue with psycopg
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 
 async def main() -> None:
     db = SessionLocal()
